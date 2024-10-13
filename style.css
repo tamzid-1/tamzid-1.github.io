@@ -1,1 +1,65 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
 
+.navbar {
+    margin-bottom: 0;
+    z-index: 100;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: white;
+}
+
+.home h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #f39c12;
+}
+
+.profiles {
+    padding: 60px 0;
+}
+
+.profile-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.profile-link:hover {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.profile-link i {
+    font-size: 50px;
+}
+
+.contact {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #333;
+}
+
+.contact a:hover {
+    color: #007bff;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+}
