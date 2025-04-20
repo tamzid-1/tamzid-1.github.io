@@ -1,115 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Competitive Programmer Portfolio of Tamzid Alahi">
-    <title>Tamzid Alahi | CP Portfolio</title>
-    
-    <!-- Boxicons CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Custom JS -->
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tamzid Alahi</title>
+  <!-- Boxicons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f0f4ff, #d6e4ff);
+      color: #222;
+      padding: 40px;
+      text-align: center;
+      transition: background 0.5s, color 0.5s;
+      position: relative;
+    }
+
+    .dark-mode {
+      background: linear-gradient(135deg, #121212, #1e1e1e);
+      color: #eee;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      min-height: 60px;
+      display: inline-block;
+      position: relative;
+      right: -30px;
+    }
+
+    h2 {
+      font-weight: normal;
+      color: inherit;
+      margin-bottom: 30px;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      text-decoration: none;
+      color: white;
+      background-color: #111;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .links a::before {
+      content: "";
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.2);
+      transition: left 0.4s ease;
+      z-index: 0;
+    }
+
+    .links a:hover::before {
+      left: 0;
+    }
+
+    .links a:hover {
+      background-color: #444;
+      transform: scale(1.07);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: inherit;
+    }
+
+    #darkToggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 18px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    #darkToggle:hover {
+      color: #ff6347;
+    }
+
+    .typed-text {
+      display: inline-block;
+      border-right: 2px solid #555;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: blink 0.75s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Tamzid Alahi</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#profiles">Profiles</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <h1><span id="typed" class="typed-text"></span></h1>
+  <h2>Aspiring Programmer & Math Olympiad Learner</h2>
 
-    <!-- Home Section -->
-    <section id="home" class="home d-flex align-items-center text-center">
-        <div class="container">
-            <h1 class="display-3">Hi, I'm <span class="highlight">Tamzid Alahi</span></h1>
-            <p class="lead">Competitive Programmer | Problem Solver</p>
-            <a href="#profiles" class="btn btn-outline-light btn-lg glow-button mt-4">Explore My Profiles</a>
-        </div>
-    </section>
+  <p>
+    I'm passionate about coding, solving problems, and building cool things.
+    Currently learning advanced math and trying to improve in competitive programming.
+  </p>
 
-    <!-- About Me Section -->
-    <section id="about" class="about py-5 text-center">
-        <div class="container">
-            <h2>About Me</h2>
-            <p class="lead">I am a competitive programmer skilled in algorithms, data structures, and problem-solving techniques. I frequently participate in coding competitions on Codeforces, AtCoder, and LeetCode, solving complex problems with C++.</p>
-        </div>
-    </section>
+  <div class="links">
+    <a href="https://codeforces.com/profile/Aozuki" target="_blank">Codeforces</a>
+    <a href="https://atcoder.jp/users/tam_zid" target="_blank">AtCoder</a>
+    <a href="https://www.codechef.com/users/tamzid21" target="_blank">CodeChef</a>
+  </div>
 
-    <!-- Profiles Section -->
-    <section id="profiles" class="profiles py-5 text-center bg-light">
-        <div class="container">
-            <h2>Competitive Programming Profiles</h2>
-            <div class="row mt-4">
-                <div class="col-md-3">
-                    <a href="https://github.com/tamzid-1" class="profile-link" target="_blank">
-                        <i class='bx bxl-github bx-lg'></i>
-                        <h4>GitHub</h4>
-                        <p class="text-muted">tamzid-1</p>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="https://codeforces.com/profile/tamzid_alahi" class="profile-link" target="_blank">
-                        <i class='bx bxl-codeforces bx-lg'></i>
-                        <h4>Codeforces</h4>
-                        <p class="text-muted">tamzid_alahi</p>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="https://atcoder.jp/users/tam_zid" class="profile-link" target="_blank">
-                        <i class='bx bxl-atcoder bx-lg'></i>
-                        <h4>AtCoder</h4>
-                        <p class="text-muted">tam_zid</p>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="https://leetcode.com/tamzid_alahi" class="profile-link" target="_blank">
-                        <i class='bx bxl-leetcode bx-lg'></i>
-                        <h4>LeetCode</h4>
-                        <p class="text-muted">tamzid_alahi</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Dark Mode Toggle Button with Boxicon -->
+  <button id="darkToggle"><i class="bx bx-moon"></i></button>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact py-5 text-center bg-light">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p class="lead">Feel free to reach out if you want to collaborate on a project or just say hello!</p>
+  <footer>
+    <p>&copy; 2025 Tamzid Alahi. Built with HTML, CSS & JS</p>
+  </footer>
 
-            <!-- G-mail Link -->
-            <p class="lead"><strong>G-mail:</strong> <a href="mailto:tamzidalahi21@gmail.com" class="text-dark">tamzidalahi21@gmail.com</a></p>
-        </div>
-    </section>
+  <script>
+    // Typing effect
+    const text = "Hello, I'm Tamzid Alahi";
+    const typed = document.getElementById("typed");
+    let index = 0;
 
-    <!-- Footer -->
-    <footer class="py-3 bg-dark text-light text-center">
-        <p>&copy; 2024 Tamzid Alahi. All rights reserved.</p>
-    </footer>
+    function typeEffect() {
+      if (index < text.length) {
+        typed.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 70); // Smooth speed
+      }
+    }
+    typeEffect();
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
+    // Dark Mode Toggle
+    const toggleBtn = document.getElementById("darkToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleBtn.innerHTML = document.body.classList.contains("dark-mode") 
+        ? '<i class="bx bx-sun"></i>' 
+        : '<i class="bx bx-moon"></i>';
+    });
+  </script>
 </body>
 </html>
